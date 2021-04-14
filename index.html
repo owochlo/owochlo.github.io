@@ -3,7 +3,8 @@
     <title>chlo</title>
     <script>
       function mix() {
-        for (var i=0; i<document.getElementById('text').innerText.length; i++) {document.getElementById('text').innerText[i] = '';
+        var len = document.getElementById('text').innerText.length;
+        for (var i=0; i<len; i++) {document.getElementById('text').innerText[i] = '';
      if ( Math.random() > 0.5) {
               document.getElementById('text').innerText +=  document.getElementById('text').innerText[i].toLowerCase();
               } else {
