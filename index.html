@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>chloreee</title>
+    <script>
+      function mix() {
+        for (var i=0; i<document.getElementById('#text').innerText.length; i++) {document.getElementById('#text').innerText[i] = '';
+          if ( Math.random() > 0.5) {
+              document.getElementById('#text').innerText +=  document.getElementById('#text').innerText[i].toLowerCase();
+              } else {
+              document.getElementById('#text').innerText +=  document.getElementById('#text').innerText[i].toUpperCase();
+              }              
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="text">hewwo there 😺</h1>
+    <button>mix</button>
+  </body>
+</html>
