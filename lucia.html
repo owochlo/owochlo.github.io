@@ -1,0 +1,12 @@
+<script src="https://unpkg.com/lucia"></script>
+
+<div l-state="{ value: '', todo: JSON.parse(localStorage.getItem('todo')) || [] }">
+  <!-- two-way-binds `value` prop to value -->
+  <input l-model="value" />
+  <!-- captures click event, pushing current `value` to `todo` -->
+  <button @click="todo.push(value); localStorage.setItem('todo', JSON.stringify(todo))">Create</button>
+  <!-- joins array together -->
+  <ul l-for="task in todo">
+    <li l-text="this.task"></li>
+  </ul>
+</div>
